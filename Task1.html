@@ -6,7 +6,7 @@
     <title>Rahul Singh - Landing Page</title>
     <style>
         /* CSS styles go here */
-        /* Reset some default styles */
+        
         html, body, h1, h2, p, ul, li {
             margin: 0;
             padding: 0;
@@ -22,6 +22,8 @@
             padding: 20px;
             text-align: center;
             color: #fff;
+            display: flex; /* Added to align image and text side by side */
+            align-items: center; /* Center vertically */
         }
 
         h1 {
@@ -76,17 +78,43 @@
             color: #fff;
             padding: 10px 0;
         }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Creates a round shape */
+            overflow: hidden; /* Clip the image to the round shape */
+            margin-right: 20px; /* Spacing between image and text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; /* Center and cover the image */
+        }
+
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Rahul Singh</h1>
-        <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/rahul-singh-2a255722a">LinkedIn</a></li>
-                <li><a href="https://github.com/DarthVaderrs">GitHub</a></li>
-            </ul>
-        </nav>
+    
+        <div class="profile-img">
+            <img src="selfdp.jpg" alt="Rahul Singh">
+        </div>
+
+        <div>
+            <h1>Rahul Singh</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/rahul-singh-2a255722a">LinkedIn</a></li>
+                    <li><a href="https://github.com/DarthVaderrs">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="hero">
